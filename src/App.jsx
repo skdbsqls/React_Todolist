@@ -57,7 +57,6 @@ const App = () => {
 
   // Todo 토글
   const clickToggleButtonHandler = (id) => {
-    // map을 쓰면 아주 깔쌈하게 해결됨
     const newTodos = todos.map((todo) => {
       if (todo.id === id) {
         return {
@@ -67,7 +66,6 @@ const App = () => {
       }
       return todo;
     });
-    // todos를 newTodos의 값으로 바꾼다.
     setTodos(newTodos);
   };
 
