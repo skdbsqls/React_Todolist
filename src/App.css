@@ -2,15 +2,28 @@
   font-family: "yg-jalnan";
   src: url("./fonts/여기어때잘난체.ttf");
 }
+* {
+  font-family: "yg-jalnan";
+}
+
+.layout {
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  min-width: 800px;
+}
+
+.my-todo-list {
+  width: 100%;
+}
 
 .header {
   background-color: #fdffab;
-  /* border-radius: 10px; */
-  padding: 20px;
-  margin: 20px 40px 10px 40px;
-  font-family: "yg-jalnan";
+  padding: 25px;
+  margin-top: 20px;
   color: #9376e0;
-  font-size: 25px;
+  font-size: 28px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -18,10 +31,7 @@
 
 .todo-input {
   background-color: #a8d8ea;
-  /* border-radius: 10px; */
   padding: 20px;
-  margin: 10px 40px 10px 40px;
-  font-family: "yg-jalnan";
   color: #9376e0;
   font-size: 18px;
   display: flex;
@@ -44,7 +54,6 @@
   background-color: #9376e0;
   border-radius: 10px;
   padding: 8px 30px 8px 30px;
-  font-family: "yg-jalnan";
   font-size: 15px;
   color: white;
   border: none;
@@ -53,31 +62,25 @@
 
 .working {
   background-color: #fdffab;
-  /* border-radius: 10px; */
   padding: 10px 10px 10px 20px;
-  margin: 10px 40px 10px 40px;
   font-family: "yg-jalnan";
   color: #9376e0;
   font-size: 25px;
-  display: flex;
 }
 
 .todo-list {
   background-color: #a8d8ea;
-  /* border-radius: 10px; */
   padding: 20px;
-  margin: 10px 40px 10px 40px;
-  font-family: "yg-jalnan";
   color: #9376e0;
   font-size: 25px;
   display: flex;
-  gap: 20px 1%;
+  gap: 20px 2%;
   flex-wrap: wrap;
 }
 
 .todo {
-  width: 300px;
-  height: 200px;
+  width: 252px;
+  height: 180px;
   background-color: white;
   border-radius: 10px;
   padding: 10px;
@@ -87,15 +90,20 @@
 
 .todo-title,
 .todo-content {
-  font-family: "yg-jalnan";
-  margin: 10px;
+  margin: 5px;
 }
 .todo-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-size: 25px;
   color: #9376e0;
 }
 .todo-content {
-  height: 110px;
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  height: 90px;
   font-size: 18px;
   color: #2b2730;
 }
@@ -108,12 +116,11 @@
 }
 
 .remove-btn,
-.done-btn {
+.toggle-btn {
   background-color: #9376e0;
   border-radius: 10px;
   padding: 8px 30px 8px 30px;
   margin-left: 10px;
-  font-family: "yg-jalnan";
   font-size: 15px;
   color: white;
   border: none;
@@ -121,13 +128,51 @@
   display: inline-block;
 }
 
-.done {
+.remove-btn:hover {
+  background-color: #ff8aae;
+}
+.toggle-btn:hover {
+  background-color: #98ddca;
+}
+
+.complete {
   background-color: #fdffab;
-  /* border-radius: 10px; */
   padding: 10px 10px 10px 20px;
-  margin: 10px 40px 10px 40px;
-  font-family: "yg-jalnan";
   color: #9376e0;
   font-size: 25px;
   display: flex;
+}
+
+.done-list {
+  background-color: #a8d8ea;
+  padding: 20px;
+  color: #9376e0;
+  font-size: 25px;
+  display: flex;
+  gap: 20px 2%;
+  flex-wrap: wrap;
+}
+
+.done {
+  width: 250px;
+  height: 180px;
+  background-color: white;
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 18px;
+  gap: 20px;
+}
+
+.done-title,
+.done-content {
+  margin: 10px;
+}
+.done-title {
+  font-size: 25px;
+  color: #9376e0;
+}
+.done-content {
+  height: 90px;
+  font-size: 18px;
+  color: #374259;
 }
